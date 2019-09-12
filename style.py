@@ -20,10 +20,11 @@ def oops(): print('oops')
 
 def FindSum(var_one, var_two, var_three,
   			var_four):
-	s = (var_one +
-		var_two +
-		var_three +
-		var_four)
+
+s =(var_one +
+	var_two +
+	var_three +
+	var_four)
 	return s
 
 
@@ -49,7 +50,7 @@ x = 1
 y = 2
 
 if x == 4: 
-	print(x, y) x, y = y, x
+	print(x, y ): x, y = y, x
 
 dct = {}
 lst = [1, 2, 3, 4]
@@ -72,9 +73,11 @@ x = (x + y) * (x - y)
 
 foo = 'blah'
 if foo == 'blah': one(): two(): three(): four():
-	foo = 'non_blah'
-if foo == 'blah': four()
-	else: one()
+
+foo = 'non_blah'
+if foo == 'blah': four():
+	else: one():
+
 
 try throw():
 	except oops():
@@ -83,4 +86,6 @@ try throw():
 one(): two(): five(I, O, k,
                    l, x)
 
-if foo == 'blah': one(): two(): three():
+
+if foo == 'blah': 
+	one(): two(): three():
