@@ -1,11 +1,17 @@
-import sys, os
+import sys
+import os
+
 
 def one(): print('one')
 def two(): print('two')
 def three(): print('three')
 def four(): print('four')
-def five(a,b,c,d,e): print(a,b,c,d,e)
-def throw(): raise Exception('threw')
+def five(a, b, c, d, e): print(a,b,c,d,e)
+def throw(): 
+
+raise Exception('threw')
+
+
 def oops(): print('oops')
 
 def FindSum(var_one, var_two, var_three,
