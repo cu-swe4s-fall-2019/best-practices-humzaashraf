@@ -6,10 +6,12 @@ def one(): print('one')
 def two(): print('two')
 def three(): print('three')
 def four(): print('four')
+
+
 def five(a, b, c, d, e): print(a, b, c, d, e)
 
 
-def throw(): 
+def throw():
 	raise Exception('threw')
 
 
@@ -18,14 +20,17 @@ def oops(): print('oops')
 
 def FindSum(var_one, var_two, var_three,
   			var_four):
+
 s =(var_one +
 	var_two +
 	var_three +
 	var_four)
 	return s
 
+
 def complex(real, imag = 0.0):
     return magic(r = real, i = imag)
+
 
 I = 1
 O = 1
@@ -73,12 +78,14 @@ foo = 'non_blah'
 if foo == 'blah': four():
 	else: one():
 
+
 try throw():
 	except oops():
 		finally one():
 
 one(): two(): five(I, O, k,
                    l, x)
+
 
 if foo == 'blah': 
 	one(): two(): three():
