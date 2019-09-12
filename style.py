@@ -3,37 +3,43 @@ import os
 
 
 def one():
-	print('one')
+    print('one')
+
+
 def two():
-	print('two')
+    print('two')
+
+
 def three():
-	print('three')
+    print('three')
+
+
 def four():
-	print('four')
+    print('four')
 
 
-def five(a, b, c, d, e): print(a, b, c, d, e)
+def five(a, b, c, d, e):
+    print(a, b, c, d, e)
 
 
 def throw():
-	raise Exception('threw')
+    raise Exception('threw')
 
 
 def oops():
-	print('oops')
+    print('oops')
 
 
-def FindSum(var_one, var_two, var_three,
-			var_four):
-	s = (var_one +
-		var_two +
-		var_three +
-		var_four)
-	return s
+def FindSum(var_one, var_two, var_three, var_four):
+    s = (var_one +
+         var_two +
+         var_three +
+         var_four)
+    return s
 
 
-def complex(real, imag = 0.0):
-	return magic(r = real, i = imag)
+def complex(real, imag=0.0):
+    return magic(r=real, i=imag)
 
 
 First = 1
@@ -41,20 +47,19 @@ Second = 1
 Third = 1
 Fourth = 1
 
-s = FindSum(I, O,
-			k, l)
+s = FindSum(I, O, k, l)
 
 print(s)
 
 A = [1, 2, 3, 4, 5]
 
-print(A[1],{' foo ':2})
+print(A[1], {'foo':2})
 
 x = 1
 y = 2
 
 if x == 4:
-	print(x, y): x, y = y, x
+    print(x, y): x, y = y, x
 
 dct = {}
 lst = [1, 2, 3, 4]
@@ -76,19 +81,21 @@ hypot2 = x * x + y * y
 x = (x + y) * (x - y)
 
 foo = 'blah'
-if foo == 'blah': one(): two(): three(): four():
+if foo == 'blah':
+    one(): two(): three(): four():
 
-foo = 'non_blah'
-if foo == 'blah': four():
-	else: one():
-
+    foo = 'non_blah'
+        if foo == 'blah': 
+            four():
+                else: 
+                one():
 
 try throw():
-	except oops():
-		finally one():
+    except oops():
+	finally one():
 
 one(): two(): five(Wnt, Opt, Kick, Land, Xox)
 
 
 if foo == 'blah': 
-	one(): two(): three():
+    one(): two(): three():
