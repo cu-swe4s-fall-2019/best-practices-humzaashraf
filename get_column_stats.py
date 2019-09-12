@@ -1,15 +1,29 @@
-import sys, math
+import sys
+import math
+import argparse
 
-file_name = sys.argv[1]
-col_num = int(sys.argv[2])
+parser = argparse.ArgumentParser(
+            description='input file and column number; returns the mean & std',
+            prog='input arg')
 
-f = open(file_name, 'r')
+parser.add_argument('file_name', type=str, help='Name of the file')
+
+parser.add_argument('col_num', type=int, help='The column number')
+
+args = parser.parse_args()
+
+print(args.file_name, args.col_num)
+
+# file_name = sys.argv[1]
+# col_num = int(sys.argv[2])
+
+f = open(args.file_name, 'r')
 
 V = []
 
 for l in f:
     A = [int(x) for x in l.split()]
-    V.append(A[col_num])
+    V.append(A[args.col_num])
 
 mean = sum(V)/len(V)
 

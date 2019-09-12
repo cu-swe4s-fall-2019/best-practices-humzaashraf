@@ -1,4 +1,7 @@
-pycodestyle style.py
+test -e ssshtest || wget -q https://raw.githubusercontent.com/ryanlayer/ssshtest/master/ssshtest
+. ssshtest
+
+# pycodestyle style.py
 
 pycodestyle get_column_stats.py
 
