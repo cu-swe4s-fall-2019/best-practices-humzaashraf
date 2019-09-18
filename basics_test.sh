@@ -1,9 +1,17 @@
 test -e ssshtest || wget -q https://raw.githubusercontent.com/ryanlayer/ssshtest/master/ssshtest
 . ssshtest
 
-# pycodestyle style.py
 
-pycodestyle get_column_stats.py
+# Test the code format fits the PEP8 style guidelines
+run style_test pycodestyle style.py
+assert_no_stdout
+assert_exit_code 0
+
+run col_stats_test pycodestyle get_column_stats.py
+assert_no_stdout
+assert_exit_code 0
+
+
 
 (for i in `seq 1 100`; do 
     echo -e "$RANDOM\t$RANDOM\t$RANDOM\t$RANDOM\t$RANDOM";
