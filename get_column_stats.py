@@ -18,26 +18,26 @@ def main():
 	# Functional validation of output with various argument errors
 	
 	try:
-		int(args.col_num) = None 
-	except ValueError
+		int(args.col_num) == None 
+	except ValueError:
 		print('Column index must be an integer')
 		sys.exit(1)
 
 	try:
-		open(file_name, 'r') = None
-	except FileNotFoundError
+		open(file_name, 'r') == None
+	except FileNotFoundError:
 		print('No file found')
 		sys.exit(1)
 
 	try:
-		col_from_file(args.file_name,args.col_num) = None 
-	except IndexError
+		col_from_file(args.file_name,args.col_num) == None 
+	except IndexError:
 		print('File or list index out of range')
 		sys.exit(1)
 
 	try:
-		str(args.file_name) = None
-	except PermissionError
+		str(args.file_name) == None
+	except PermissionError:
 		print('File cannot be accessed')
 		sys.exit(1)
 
