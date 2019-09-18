@@ -3,51 +3,6 @@ import math
 import argparse
 
 
-def col_from_file(file_name, col_num): 
-    """Take a file name and a column number and create an array
-
-    Parameters
-    ----------
-    
-    file_name : string
-    col_num : integer
-
-    Returns
-    -------
-    V : fill empty array w/ integers from specified column 
-
-    """
-	V = []
-
-	f = open(file_name, 'r')
-
-	for l in f:
-	    A = [int(x) for x in l.split()]
-	    V.append(A[col_num])
-
-	    return(V)
-
-
-def mean_calc(data_list): 
-    """ Take the mean and standard deviation of an array
-
-    Arguments
-    ---------
-    data_list : array of integers
-
-    Returns
-    -------
-    mean : mean
-    stdev : standard deviation
-
-    """
-	mean = sum(data_list)/len(data_list)
-	stdev = math.sqrt(sum([(mean-x)**2 for x in data_list]) / len(data_list))
-
-	return(mean)
-	return(stdev)
-
-
 def main():
 	parser = argparse.ArgumentParser(
 	         description='input file and column number; returns the mean & std',
@@ -85,6 +40,51 @@ def main():
 	except PermissionError
 		print('File cannot be accessed')
 		sys.exit(1)
+
+
+def col_from_file(file_name, col_num): 
+    """Take a file name and a column number and create an array
+
+    Parameters
+    ----------
+    
+    file_name : string
+    col_num : integer
+
+    Returns
+    -------
+    V : fill empty array w/ integers from specified column 
+
+    """
+	V = []
+
+	f = open(args.file_name, 'r')
+
+	for l in f:
+	    A = [int(x) for x in l.split()]
+	    V.append(A[args.col_num])
+
+	    return(V)
+
+
+def mean_calc(data_list): 
+    """ Take the mean and standard deviation of an array
+
+    Arguments
+    ---------
+    data_list : array of integers
+
+    Returns
+    -------
+    mean : mean
+    stdev : standard deviation
+
+    """
+	mean = sum(data_list)/len(data_list)
+	stdev = math.sqrt(sum([(mean-x)**2 for x in data_list]) / len(data_list))
+
+	return(mean)
+	return(stdev)
 
 
 if __name__ == '__main__':
