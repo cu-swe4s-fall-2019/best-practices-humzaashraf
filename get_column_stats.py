@@ -17,15 +17,15 @@ def col_from_file(file_name, col_num):
     V : fill empty array w/ integers from specified column 
 
     """
-    V = []
+    data_list = []
 
     f = open(file_name, 'r')
 
     for l in f:
         A = [int(x) for x in l.split()]
-        V.append(A[col_num])
+        data_list.append(A[col_num])
 
-    return(V)
+    return(data_list)
 
 
 def mean_calc(data_list): 
@@ -56,8 +56,8 @@ def main():
              description='input file and column number; returns the mean & std',
              prog='input arg')
 
-    parser.add_argument('file_name', type=str, help='Name of the file')
-    parser.add_argument('col_num', type=int, help='The column number')
+    parser.add_argument('--file_name', type=str, help='Name of the file')
+    parser.add_argument('--col_num', type=int, help='The column number')
 
     args = parser.parse_args()
 
