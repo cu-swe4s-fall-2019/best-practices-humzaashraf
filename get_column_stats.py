@@ -14,7 +14,7 @@ def col_from_file(file_name, col_num):
 
     Returns
     -------
-    V : fill empty array w/ integers from specified column 
+    data_list : fill empty array w/ integers from specified column 
 
     """
     data_list = []
