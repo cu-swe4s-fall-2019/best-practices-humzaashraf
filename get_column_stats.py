@@ -12,7 +12,7 @@ def col_from_file(file_name, col_num):
     file_name : string
     col_num : integer
 
-    Returns
+    Returnss
     -------
     data_list : fill empty array w/ integers from specified column 
 
@@ -25,6 +25,8 @@ def col_from_file(file_name, col_num):
         A = [int(x) for x in l.split()]
         data_list.append(A[col_num])
 
+    print(data_list)
+    
     return(data_list)
 
 
@@ -44,11 +46,11 @@ def mean_calc(data_list):
     mean = sum(data_list)/len(data_list)
     stdev = math.sqrt(sum([(mean-x)**2 for x in data_list]) / len(data_list))
 
-    return(mean)
-    return(stdev)
-
     print(mean)
     print(stdev)
+
+    return([mean,stdev]) 
+
 
 
 def main():
