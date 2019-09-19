@@ -19,14 +19,14 @@ def col_from_file(file_name, col_num):
     """
     data_list = []
 
-    f = open(file_name, 'r')
+    f = open(args.file_name, 'r')
 
     for l in f:
         A = [int(x) for x in l.split()]
-        data_list.append(A[col_num])
+        data_list.append(A[args.col_num])
 
     print(data_list)
-    
+
     return(data_list)
 
 
@@ -63,7 +63,18 @@ def main():
 
     args = parser.parse_args()
 
-    print(args.file_name, args.col_num)
+
+    V = []
+
+    f = open(args.file_name, 'r')
+
+    for l in f:
+        A = [int(x) for x in l.split()]
+        V.append(A[args.col_num])
+
+	x = mean_calc(V)
+	print(x)
+
 
     # Functional validation of output with various argument errors
 
