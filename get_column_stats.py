@@ -14,18 +14,18 @@ def col_from_file(file_name, col_num):
 
     Returns
     -------
-    V : fill empty array w/ integers from specified column 
+    data_list : fill empty array w/ integers from specified column 
 
     """
-    V = []
+    data_list = []
 
     f = open(file_name, 'r')
 
     for l in f:
         A = [int(x) for x in l.split()]
-        V.append(A[col_num])
+        data_list.append(A[col_num])
 
-    return(V)
+    return(data_list)
 
 
 def mean_calc(data_list): 
