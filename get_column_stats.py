@@ -66,11 +66,19 @@ def main():
 
     V = []
 
-    f = open(args.file_name, 'r')
+    try:
+        f = open(args.file_name, 'r')
+    except FileNotFoundError:
+        print('No file found')
+        sys.exit(1)
 
     for l in f:
         A = [int(x) for x in l.split()]
-        V.append(A[args.col_num])
+        try: 
+            V.append(A[args.col_num])
+        except ValueError:
+        	print('Column index must be an integer')
+        	sys.exit(1)
 
 	x = mean_calc(V)
 	print(x)
@@ -79,19 +87,13 @@ def main():
     # Functional validation of output with various argument errors
 
     try:
-        int(args.col_num) == None 
+        int(args.col_num) == None
     except ValueError:
         print('Column index must be an integer')
         sys.exit(1)
 
     try:
-        open(args.file_name, 'r') == None
-    except FileNotFoundError:
-        print('No file found')
-        sys.exit(1)
-
-    try:
-        col_from_file(args.file_name,args.col_num) == None 
+        col_from_file(args.file_name,args.col_num) == None
     except IndexError:
         print('File or list index out of range')
         sys.exit(1)
