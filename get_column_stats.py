@@ -90,9 +90,5 @@ def main():
         sys.exit(1)
 
 
-print(mean)
-print(stdev)
-
-
 if __name__ == '__main__':
     main()
