@@ -47,6 +47,9 @@ def mean_calc(data_list):
     return(mean)
     return(stdev)
 
+    print(mean)
+    print(stdev)
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -58,7 +61,7 @@ def main():
 
     args = parser.parse_args()
 
-	print(args.file_name, args.col_num)
+    print(args.file_name, args.col_num)
 
     # Functional validation of output with various argument errors
 
@@ -69,7 +72,7 @@ def main():
         sys.exit(1)
 
     try:
-        open(file_name, 'r') == None
+        open(args.file_name, 'r') == None
     except FileNotFoundError:
         print('No file found')
         sys.exit(1)
@@ -85,6 +88,10 @@ def main():
     except PermissionError:
         print('File cannot be accessed')
         sys.exit(1)
+
+
+print(mean)
+print(stdev)
 
 
 if __name__ == '__main__':
