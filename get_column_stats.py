@@ -3,34 +3,7 @@ import math
 import argparse
 
 
-def col_from_file(file_name, col_num): 
-    """Take a file name and a column number and create an array
-
-    Parameters
-    ----------
-    
-    file_name : string
-    col_num : integer
-
-    Returnss
-    -------
-    data_list : fill empty array w/ integers from specified column 
-
-    """
-    data_list = []
-
-    f = open(args.file_name, 'r')
-
-    for l in f:
-        A = [int(x) for x in l.split()]
-        data_list.append(A[args.col_num])
-
-    print(data_list)
-
-    return(data_list)
-
-
-def mean_calc(data_list): 
+def mean_calc(data_list):
     """ Take the mean and standard deviation of an array
 
     Arguments
@@ -49,8 +22,7 @@ def mean_calc(data_list):
     print(mean)
     print(stdev)
 
-    return([mean,stdev]) 
-
+    return([mean,stdev])
 
 
 def main():
