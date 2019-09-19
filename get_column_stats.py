@@ -3,7 +3,7 @@ import math
 import argparse
 
 
-def mean_calc(data_list): 
+def mean_calc(data_list):
     """ Take the mean and standard deviation of an array
 
     Arguments
@@ -22,7 +22,7 @@ def mean_calc(data_list):
     print(mean)
     print(stdev)
 
-    return([mean,stdev]) 
+    return([mean,stdev])
 
 
 def main():
