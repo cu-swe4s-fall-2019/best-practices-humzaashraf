@@ -72,8 +72,8 @@ def main():
         A = [int(x) for x in l.split()]
         V.append(A[args.col_num])
 
-	x = mean_calc(V)
-	print(x)
+    x = mean_calc(V)
+    print(x)
 
 
     # Functional validation of output with various argument errors
