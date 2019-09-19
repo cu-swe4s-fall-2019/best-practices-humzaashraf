@@ -71,6 +71,10 @@ def main():
     except FileNotFoundError:
         print('No file found')
         sys.exit(1)
+    except PermissionError:
+        print('Cannot read')
+        sys.exit(1)
+
 
     for l in f:
         A = [int(x) for x in l.split()]
@@ -79,30 +83,12 @@ def main():
         except ValueError:
         	print('Column index must be an integer')
         	sys.exit(1)
+        except IndexError:
+               print('Out of bounds')
+               sys.exit(1)
 
     x = mean_calc(V)
     print(x)
-
-
-    # Functional validation of output with various argument errors
-
-    try:
-        int(args.col_num) == None
-    except ValueError:
-        print('Column index must be an integer')
-        sys.exit(1)
-
-    try:
-        col_from_file(args.file_name,args.col_num) == None
-    except IndexError:
-        print('File or list index out of range')
-        sys.exit(1)
-
-    try:
-        str(args.file_name) == None
-    except PermissionError:
-        print('File cannot be accessed')
-        sys.exit(1)
 
 
 if __name__ == '__main__':
